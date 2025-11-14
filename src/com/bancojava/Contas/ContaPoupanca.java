@@ -1,4 +1,8 @@
-public class ContaPoupanca extends ContaBancaria{
+package com.bancojava.Contas;
+import com.bancojava.enumm.TipoConta;
+
+
+public class ContaPoupanca extends ContaBancaria {
 
     public ContaPoupanca(Double saldo, TipoConta tipodaConta) {
         super(saldo, tipodaConta);
@@ -9,7 +13,7 @@ public class ContaPoupanca extends ContaBancaria{
         System.out.println("Valor depossitado na conta poupanca R$" + valor);
         System.out.println("AVISO: Depositos tem uma taxa de 10% ");
         double taxa = valor * 0.1;
-        this.saldo = valor - taxa;
+        this.saldo += valor - taxa;
 
     }
 }
